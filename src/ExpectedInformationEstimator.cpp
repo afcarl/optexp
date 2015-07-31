@@ -549,14 +549,14 @@ double ExpectedInformationEstimator::EvaluateMIS(const VectorXd& design)
     }
   }
 
-  cout << "MIS_priorCache.size() = " << ML_priorCache.size() << endl;
-  cout << "MIS_cache.size() = " << ML_cache.size() << endl;
-  cout << "rescaled = " << rescaled << endl;
+  // cout << "MIS_priorCache.size() = " << ML_priorCache.size() << endl;
+  // cout << "MIS_cache.size() = " << ML_cache.size() << endl;
+  // cout << "rescaled = " << rescaled << endl;
 
   double mixtureSize = 0;
   for (int i = 0; i < N; ++i)
     mixtureSize += mixtureIndices[i].size();
-  cout << "mixtureSize = " << mixtureSize / N << endl;
+  cout << "MIS components (avg) = " << mixtureSize / N << endl;
 
   double EIG = (logCL - logML).array().sum() / N;
 
