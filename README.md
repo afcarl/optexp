@@ -29,6 +29,8 @@ int main(int argc, char **argv)
   estimator->M1 = 100; // inner Monte Carlo samples
   estimator->M2 = 100; // inner Monte Carlo samples
 
+  estimator->useMIS = true; // use Multiple Importance Sampling
+
   VectorXd design = VectorXd::Constant(1, 0.5); // input is 1-dimensional
 
   double EIG = estimator->Evaluate(design);
@@ -42,7 +44,8 @@ int main(int argc, char **argv)
 ```
 Output:
 ```
+MIS components (avg) = 5.304
 design = 0.5
-EIG = 4.8521
-time = 0.0355077
+EIG = 1.94098
+time = 0.478495
 ```
