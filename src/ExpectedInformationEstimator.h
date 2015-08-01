@@ -85,7 +85,7 @@ class ExpectedInformationEstimator {
 
     bool   verbose;
 
-  private:
+  public:
 
     /// \brief Execution time in milliseconds
     double   executionTime;
